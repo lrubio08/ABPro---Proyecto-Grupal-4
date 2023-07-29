@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{%load static%}
+{% block main %}
+<div class="card-group ">
+  <div class="card ">
+    <img src="{%static 'imagenes/proveedor.jpg'%}" class="card-img-top " alt="...">
+    <div class="card-body ">
+      <h5 class="card-title text-center">Registrate como Proveedor</h5>
+      <p class="card-text text-center">Si quieres trabajar con nosotros completa el formulario</p>
+      <a href="{% url 'app:crearProveedor' %}" class="btn btn-primary w-100">Registrar</a>
+    </div>
+  </div>
+</div>
+{% endblock main %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block main %}
+{%load static  %}
+<div class="container mt-5">
+    <h1 class="text-center">Crear Proveedor</h1>
+    <form method="post" class="form" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group mb-2">
+            <label for="{{ form.nombre.id_for_label }}">Nombre del Proveedor</label>
+            {{ form.nombre }}
+        </div>
+        <div class="form-group mb-2">
+            <label for="{{ form.email.id_for_label }}">Ingresar correo electronico</label>
+            {{ form.email }}
+        </div>
+        <div class="form-group mb-2">
+            <label for="{{ form.telefono.id_for_label }}">Ingresar número telefonico</label>
+            {{ form.telefono }}
+        </div>
+        <div class="form-group mb-2">
+            <label class="archivos-proveedor" for="{{ form.productos.id_for_label }}">Ingrese sus productos</label>
+            {{ form.productos }}
+        </div>
+        <button type="submit" class="btn btn-primary w-100 boton-productos">Enviar</button>
+    </form>
+</div>
+{% endblock main %}
